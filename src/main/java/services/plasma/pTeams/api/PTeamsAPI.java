@@ -1,17 +1,40 @@
-package services.plasma.pTeamsAPI;
+package services.plasma.pTeams.api;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import org.bson.Document;
 
-public final class PTeamsAPI extends JavaPlugin {
+import java.util.List;
+import java.util.UUID;
 
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
+public enum PTeamsAPI {
 
+    INSTANCE;
+
+    public boolean isInTeam(UUID uuid, String teamName) {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    public String getTeamName(UUID uuid) {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
     }
+
+    public void deleteTeam(String teamName, UUID ownerUUID) {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
+    }
+
+    public void createTeam(String teamName) {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
+    }
+
+    public List<Document> getAllTeams() {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
+    }
+
+    public long getTotalTeamCount() {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
+    }
+
+    public boolean isInTeamChat(UUID uuid) {
+        throw new RuntimeException("PTeamsAPI is not a plugin!");
+    }
+
 }
